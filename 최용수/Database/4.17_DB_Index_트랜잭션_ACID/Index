@@ -3,3 +3,23 @@
 > **인덱스(Index)**는 **데이터베이스의 테이블에 대한 검색 속도를 향상 시켜주는  
 자료구조 이다**.  ( 책의 목차 )
 >
+서점에 진열된 책들의 이름, 카테고리, 위치를 저장한 테이블(book_store)에 
+
+10000권의 책 데이터가 랜덤으로 저장 되어있다.
+rowid	name	category	location
+1	let’s start java	java	A
+2	python basic	python	K
+3	js for seinor	javascript	B
+4	let’s start java	java	C
+…	…	…	…
+4222	java? java!	java	Z
+4223	pythonic thinking	python	A
+…	…	…	…
+9999	javavara	java	K
+10000	i love C++	C++	N
+
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
