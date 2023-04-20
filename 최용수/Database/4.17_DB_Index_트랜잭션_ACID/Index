@@ -18,7 +18,7 @@ rowid	name	category	location
 9999	javavara	java	K
 10000	i love C++	C++	N
 
-| Command    | Description                                    |
-| ---------- | ---------------------------------------------- |
-| git status | List all new or modified files                 |
-| git diff   | Show file differences that haven't been staged |
+항목 1 | 항목 2 | 항목 3
+----- | ----- | -----
+내용을 | 추가할 | 수있다
+여기서도 | *강조 기능이* | **작동한다**
