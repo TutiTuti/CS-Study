@@ -1,76 +1,79 @@
-# 트랜잭션 격리 수준
+# 데이터베이스에서 인덱스를 사용하는 이유
+장단점에 대해 설명해주세요.
 
-## 트랜잭션이 동시에 실행될 때 발생 가능한 이상 현상
+## ▪ 인덱스란?  INDEX
 
-### Dirty Read
+> **인덱스(Index)**는 **데이터베이스의 테이블에 대한 검색 속도를 향상 시켜주는  
+자료구조 이다**.  ( 책의 목차 )
+> 
 
-✔️ **데이터가 변경되었지만, 아직 커밋되지 않은 상황에서 다른 트랜잭션이 해당 변경 사항을 조회할 수 있는 문제**
+### 예시 [[database] DB 인덱스(INDEX)란? | 코딩장이 (itholic.github.io)](https://itholic.github.io/database-index/)
 
-![](../../../../Downloads/Untitled.png)
+서점에 진열된 책들의 이름, 카테고리, 위치를 저장한 테이블(book_store)에 10000권의 책 데이터가 랜덤으로 저장 되어있다.
 
-### Non-Repeatable Read
+| rowid | name | category | location |
+| --- | --- | --- | --- |
+| 1 | let’s start java | java | A |
+| 2 | python basic | python | K |
+| 3 | js for seinor | javascript | B |
+| 4 | let’s start java | java | C |
+| … | … | … | … |
+| 4222 | java? java! | java | Z |
+| 4223 | pythonic thinking | python | A |
+| … | … | … | … |
+| 9999 | javavara | java | K |
+| 10000 | i love C++ | C++ | N |
 
-✔️ **같은 트랜잭션 내에서 같은 데이터를 여러번 조회했을 때 읽어온 데이터가 다른** 경우
+여기서 java라는 카테고리의 책의 이름,위치를 찾기 위해 쿼리문을 입력
 
-![](../../../../Downloads/Untitled.png)
+```sql
+SELECT name,location FROM book_store WHERE category=’java’
+```
 
-### Phantom Read
+현재 인덱스가 없기 때문에 컴퓨터는 10000개를 전부다 스캔해서 결과를 찾는다.
 
-✔️  Non-Repeatable Read의 한 종류로 **조회해온 결과의 행이 새로 생기거나 없어지는 현상**
-이다.
+```sql
+CREATE INDEX index_category ON book_store(category)
+```
 
-![](../../../../Downloads/Untitled.png)
+명령어를 이용해 인덱스를 생성하면 category를 기준으로 데이터가 정렬되어 있기 
+때문에 다시 쿼리문을 입력하면 데이터를 전보다 빠르게 찾을 수 있다.
 
-## 트랜잭션 격리 수준
+### 인덱스 구조
 
-<aside>
-💡 복수개의 트랜잭션이 한번에 처리될 때, **특정 트랜잭션이 변경하거나 조회하고 있는 데이터에 대해서 다른 트랜잭션에 대해 조회 허용 여부를 결정**하는 것
+인덱스 구조는 대표적으로 **해시(Hash table)와 B+tree** 가 있다.
 
-</aside>
+**해시**는 ( Key와 Value )로 쌍을 표현하며 값을 구하는 방식이다.
+해시 충돌이라는 변수가 존재하지만 평균적으로 **O(1)**의 원하는 데이터를 탐색할 수 있는 구조이나 부등호 연산을 자주 사용하는 데이터베이스에서는 잘 사용하지 않는다.
 
-### ❓ 트랜잭션 격리 수준이 필요한 이유
-
-트랜잭션 수준 읽기 일관성 (Transaction-Level Read Consistency)을 지키기 위해서이다.
-
-- 트랜잭션 수준 읽기 일관성
-
-  트랜잭션이 시작된 시점으로부터 일관성 있게 데이터를 읽어 들이는 것을 말한다.
-
-  하나의 트랜잭션이 진행되는 동안 다른 트랜잭션에의해 변경사항이 발생하더라도 이를 무시하고 계속 일관성 있는 데이터를 보여준다.
+**B+tree**는 기존의 B-tree의 full scan시 모든 노드를 돌아야 하는 단점을 개선한 구조이다.
+특징으로 B+tree는 **leaf node에만 데이터를 저장**하고 나머지 node에는 자식 포인터만 저장한다.
+**leaf node끼리는 Linked list로 연결**되어서 full scan, 순차검색연산을 효율적으로 할 수 있다.
+![776 PNG](https://user-images.githubusercontent.com/37789623/233386402-e5da8070-574c-4df2-a5d7-4f4b1edf1bc7.png)
 
 
-## 격리 수준 4단계
 
-✔️ 밑으로 갈수록 격리 수준이 높아지며, 동시 처리 성능이 낮아진다.
+**B+tree 예시** [데이터베이스 인덱스는 왜 'B-Tree'를 선택하였는가 :: 이뇽의세상 (tistory.com)](https://helloinyong.tistory.com/296)
 
-![](../../../../Downloads/Untitled.png)
+### ▪ 장점 / 단점
 
-### 1️⃣ ****READ UNCOMMITTED****
+### (장) 데이터를 빠르게 찾을 수 있다!
 
-✔️ 트랜잭션에서 처리 중인, 아직 커밋되지 않은 데이터를 다른 트랜잭션이 읽는 것을 허용한다.
+조건검색 Where 절의 효율성
+정렬 Order by 절의 효율성
+Min, Max의 효율적인 처리 
 
-✔️ Dirty Read, Non-Repeatable Read, Phantom Read 현상이 발생한다.
+### (단) DML에 취약
 
-### 2️⃣ ****READ COMMITTED****
+SELECT를 제외한 **INSERT, UPDATE, DELETE**에서 데이터가 추가되거나 바뀐다면 테이블 내의
+값을 다시 정렬해줘야 하며 INDEX테이블과 원본 테이블 두 군데의 데이터 수정 작업을 해줘야 한다.
 
-✔️ 트랜잭션의 변경 내용이 COMMIT 되어야만 다른 트랜잭션에서 조회할 수 있다.
+### (단) 약 10%의 추가 저장 공간이 필요하다.
 
-✔️ Non-Repeatable Read, Phantom Read 현상이 발생한다.
+속도 향상을 위해 인덱스를 많이 생성을 하는 경우 그만큼 공간이 더 필요하고 관리 비용이
+많이 올라 갈 수 있다.
 
-### 3️⃣ ****REPETABLE READ****
+### (단) 잘못 사용하는 경우 오히려 검색 성능 저하
 
-✔️ 트랜잭션이 시작되기 전에 커밋된 내용에 대해서만 조회할 수 있는 격리수준
-
-✔️ Phantom Read 현상이 발생한다.
-
-### 4️⃣ ****SERIALIZABLE****
-
-✔️ 트랜잭션이 특정 테이블을 읽는 경우(SELECT) 공유 잠금(shared lock) 을 걸어, 다른 트랜잭션에서 해당 테이블의 데이터를 UPDATE, DELETE, INSERT 작업을 못하도록 막는다.
-
-✔️ 위에서 설명한 3가지 이상현상들 외 어떠한 이상현상도 일어나지 않는다.
-
----
-
-## 참고
-
-[transaction isolation level 설명합니다! isolation이 안될 때 나타날 수 있는 여러 현상들과 snapshot isolation도 같이 설명합니다!!](https://www.youtube.com/watch?v=bLLarZTrebU&list=PLcXyemr8ZeoREWGhhZi5FZs6cvymjIBVe&index=17)
+인덱스는 테이블의 전체 데이터 중에서 **10~15% 이하의 데이터를 처리하는 경우에만 효율적**이고 그 이상의 데이터를 처리하거나 **데이터 형태**에 따라 인덱스를 사용하지 않는 것이 더 낫다.
+ex>성별같이 범위가 좁은 경우 인덱스를 읽고 다시 많은 데이터를 조회해야 한다.
