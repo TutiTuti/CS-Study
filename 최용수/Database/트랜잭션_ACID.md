@@ -1,5 +1,5 @@
 ## 트랜잭션 ( Transaction )  이란?
-
+ 
 ### 데이터베이스의 상태를 변화 시키기 해서 수행하는 작업의 단위를 뜻한다.
 ex> Select , Insert, Update, Delete
 
