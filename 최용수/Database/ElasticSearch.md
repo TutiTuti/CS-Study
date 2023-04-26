@@ -51,3 +51,18 @@ Kibana : 시각화 도구
 언제든 오류가 나올 수 있는 네트워크 환경에서는 샤드/노드가 오프라인
 상태가 되거나 사라지게 될 경우에 대비하여 Fail-Over 매커니즘을 마련하는 게 매우 유익하다. ElasticSearch에서는 색인의 샤드에 대해 하나 이상의
 복사본을 생성할 수 있는데 이를 replica shard, 줄여서 리플리카라고 한다.
+
+## ElasticSearch Index와 RDBMS Index 구조 차이
+Elastic Search의 Index는 Inverted-Index로 키워드가 어떤 Document에 저장 되있는지에 대하여 저장한다.
+RDBMS는 보통 B+tree를 사용하며 특정 규칙에 따라 데이터가 저장된다.
+Elastic Search 방식의 단점으로는 SQL DB보다 개별 레코드 검색 능력이 떨어지며 특히 데이터를 업데이트 할 때에 성능이 크게 떨어진다.
+
+## Elastic Search 키워드 검색 vs RDBMS LIKE 검색
+Elastic Search 키워드 검색
+텍스트를 여러 단어로 변형하거나 텍스트 특질을 이용한 동의어, 유의어를 활용한 검색이 가능
+비정형 데이터 검색 및 색인이 가능
+형태소 분석을 통한 자연어 처리 가능
+역색인 지원으로 매우 빠르게 검색
+RDBMS LIKE 검색
+단순 텍스트 매칭에 대한 검색만을 제공 (한글 검색의 경우 빈약)
+비정형 데이터의 색인과 검색이 불가능
