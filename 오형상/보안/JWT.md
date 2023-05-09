@@ -11,7 +11,7 @@
 
 ✔️ JWT는 **.** 을 구분자로 나누어지는 세 가지 문자열의 조합이다.
 
-✔️ **.**을 기준으로 좌측부터 **Header**, **Payload**, **Signature**를 의미한다.
+✔️ . 을 기준으로 좌측부터 **Header**, **Payload**, **Signature**를 의미한다.
 
 ![image](https://user-images.githubusercontent.com/110380812/236996253-3c37d69d-c6d9-40b2-82c9-a1d72fccfdc6.png)
 
