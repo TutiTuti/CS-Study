@@ -6,7 +6,7 @@
 - [TCPvsUDP](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%C2%B7UDP.md)
 - [Http 메소드](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Http%20%EB%A9%94%EC%86%8C%EB%93%9C.md)
 - [RESTful](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/RESTful.md)
-- [CORS]()
+- [CORS](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/CORS.md)
 
   
 
