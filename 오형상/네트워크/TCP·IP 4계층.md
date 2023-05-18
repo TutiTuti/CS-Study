@@ -2,7 +2,9 @@
 
 ### OSI 7계층
 > 통신 접속에서 완료까지의 과정을 네트워크 통신을 구성하는 요소들에 따라 7단계로 정의한 국제 통신 표준 규약
-[OSI 7계층](https://github.com/Songwonseok/CS-Study/blob/main/Network/OSI%207%EA%B3%84%EC%B8%B5.md)
+
+[OSI 7계층 자세히 보기](https://github.com/Songwonseok/CS-Study/blob/main/Network/OSI%207%EA%B3%84%EC%B8%B5.md)
+
 📌 실제로 우리가 사용하는 네트워크는 TCP/IP 4계층이다.
 
 ## TCP/IP 4계층
