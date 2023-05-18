@@ -66,3 +66,7 @@
     - 최종적으로 데이타 전송을 하기 전 패킷헤더에 MAC주소와 오류 검출을 위한 부분을 첨부
 
 **예시 :** MAC, LAN, 패킷망 등에 사용되는 것 예) Ethernet, PPP, Token Ring 등
+
+---
+### 출처
+https://velog.io/@jehjong/%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%9D%B8%ED%84%B0%EB%B7%B0-TCPIP-4%EA%B3%84%EC%B8%B5
