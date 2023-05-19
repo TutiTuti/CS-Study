@@ -8,6 +8,7 @@
 - [RESTful](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/RESTful.md)
 - [CORS](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/CORS.md)
 - [TCP/IP 4계층](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%C2%B7IP%204%EA%B3%84%EC%B8%B5.md)
+- [Nginx](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/Nginx.md)
 
   
 
@@ -46,6 +47,7 @@
 
 - [싱글톤 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EC%8B%B1%EA%B8%80%ED%86%A4%20%ED%8C%A8%ED%84%B4.md)
 - [브릿지 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EB%B8%8C%EB%A6%BF%EC%A7%80%20%ED%8C%A8%ED%84%B4.md)
+- [전략 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EC%A0%84%EB%A0%A5%20%ED%8C%A8%ED%84%B4.md)
 
 
 
