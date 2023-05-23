@@ -1,7 +1,9 @@
 # CS-Study
 
 ## 📌 Java
-- [JVM 구조 & Java 동작 과정](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/Java/JVM%20%EA%B5%AC%EC%A1%B0%20%26%20Java%20%EC%8B%A4%ED%96%89%20%EB%B0%A9%EC%8B%9D.md)
+- [JVM 구조](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/Java/JVM%20%EA%B5%AC%EC%A1%B0.md)
+- [Java 실행 방식](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/Java/Java%20%EC%8B%A4%ED%96%89%20%EB%B0%A9%EC%8B%9D.md)
+- 
 
 ## 📌 네트워크
 
