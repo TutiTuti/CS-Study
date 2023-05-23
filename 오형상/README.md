@@ -1,5 +1,8 @@
 # CS-Study
 
+## 📌 Java
+- [JVM 구조 & Java 동작 과정](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/Java/JVM%20%EA%B5%AC%EC%A1%B0%20%26%20Java%20%EC%8B%A4%ED%96%89%20%EB%B0%A9%EC%8B%9D.md)
+
 ## 📌 네트워크
 
 - [TCP 3 way handshake & 4 way handshake](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/3%C2%B74%20hand%20shake.md)
@@ -49,6 +52,7 @@
 - [브릿지 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EB%B8%8C%EB%A6%BF%EC%A7%80%20%ED%8C%A8%ED%84%B4.md)
 - [전략 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EC%A0%84%EB%9E%B5%20%ED%8C%A8%ED%84%B4.md)
 - [빌더 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%EB%B9%8C%EB%8D%94%20%ED%8C%A8%ED%84%B4.md)
+- [팩토리 매서드 패턴](https://github.com/kj-cs-study/CS-Study/blob/main/%EC%98%A4%ED%98%95%EC%83%81/%EA%B8%B0%ED%83%80/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/%ED%8C%A9%ED%86%A0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%20%ED%8C%A8%ED%84%B4.md)
 
 
 
